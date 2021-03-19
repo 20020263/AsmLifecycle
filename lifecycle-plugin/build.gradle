@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+
+    compile 'com.android.tools.build:gradle:3.1.3'
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        pom.version = '1.0.3'
+        pom.artifactId = 'lifecycle-plugin'
+        pom.groupId = 'com.hxj.plugin'
+        repository(url: uri('../myplugin'))
+    }
+}

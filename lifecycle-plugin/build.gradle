@@ -12,7 +12,7 @@ dependencies {
 
 uploadArchives {
     repositories.mavenDeployer {
-        pom.version = '1.0.3'
+        pom.version = '1.0.5'
         pom.artifactId = 'lifecycle-plugin'
         pom.groupId = 'com.hxj.plugin'
         repository(url: uri('../myplugin'))

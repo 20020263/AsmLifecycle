@@ -24,7 +24,7 @@ public class LifecycleClassVisitor extends ClassVisitor implements Opcodes {
         //System.out.println("LifecycleClassVisitor : visitMethod : " + name);
         MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
         //匹配FragmentActivity
-        if ("android/support/v4/app/FragmentActivity".equals(this.mClassName)) {
+        if ("com/hxj/asmdemo/MainActivity".equals(this.mClassName)) {
             if ("onCreate".equals(name) ) {
                 //处理onCreate
                 System.out.println("LifecycleClassVisitor : change method ----> " + name);

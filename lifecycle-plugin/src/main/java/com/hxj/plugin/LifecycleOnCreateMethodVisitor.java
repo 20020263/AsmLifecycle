@@ -31,7 +31,7 @@ public class LifecycleOnCreateMethodVisitor extends MethodVisitor {
     @Override
     public void visitInsn(int opcode) {
         //方法执行后插入
-        /*if (opcode == Opcodes.RETURN) {
+        if (opcode == Opcodes.RETURN) {
             mv.visitLdcInsn("TAG");
             mv.visitTypeInsn(Opcodes.NEW, "java/lang/StringBuilder");
             mv.visitInsn(Opcodes.DUP);
@@ -45,7 +45,7 @@ public class LifecycleOnCreateMethodVisitor extends MethodVisitor {
             mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
             mv.visitMethodInsn(Opcodes.INVOKESTATIC, "android/util/Log", "i", "(Ljava/lang/String;Ljava/lang/String;)I", false);
             mv.visitInsn(Opcodes.POP);
-        }*/
+        }
         super.visitInsn(opcode);
     }
 }
